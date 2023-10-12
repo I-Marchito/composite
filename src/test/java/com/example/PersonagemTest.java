@@ -1,6 +1,7 @@
 package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -35,5 +36,17 @@ public class PersonagemTest {
                 "Categoria: Itens de Batalha\n" +
                 "Item: Poção - Valor: 300.0\n" +
                 "Item: XSpeed - Valor: 4000.0\n", brendan.getInventario());
+    }
+
+    @Test
+    void deveRetornarExcecaoInventarioVazio(){
+        try {
+            Personagem brendan = new Personagem();
+            brendan.getInventario();
+            fail();
+        }
+        catch (NullPointerException e){
+            assertEquals("Inventário vazio", e.getMessage());
+        }
     }
 }
