@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class PersonagemTest {
 
     @Test
-    void deveRetornarEmentaDisciplina() {
+    void deveRetornarInventarioBrendan() {
         Categoria categoria1 = new Categoria("Itens Chave");
 
         Categoria categoria2 = new Categoria("Pokebolas");
